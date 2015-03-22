@@ -1,0 +1,71 @@
+#body1 { color: #3B4043;
+    background-color: #F8F8F8;
+    background-image: url("images/backGround.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Verdana, Arial, sans-serif
+}
+#body2 { color: #3B4043;
+    background-color: #F8F8F8;
+    background-image: url("images/origin.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Verdana, Arial, sans-serif
+}
+P        { font-size: 12pt;
+    color: #2F4F4F;
+}
+H1, H2, H6  { font-weight: normal;
+    font-family: Arial, sans-serif
+}
+H1 { font-size: 20pt }
+H2 { font-size: 18pt }
+H6 { font-size: 12pt }
+TABLE { font-size: 10pt }
+BLOCKQUOTE P,
+ADDRESS { font-size: 10pt;
+    font-style: italic
+}
+#poz 	  {
+    color: black;
+    padding-top: 460px;
+}
+#titleC    {
+}
+#navbar   {
+    color: #8A2BE2;
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    text-transform: uppercase;
+    list-style-type: none
+}
+#tableStail1{margin: auto;}
+figure.img {
+    margin: 0;
+}
+
+figure.img figcaption {  /* стиль описания */
+    padding: 0 1%;
+    font: italic 90% Georgia,serif;
+}
+
+.example2 {
+    display:inline-block;
+    position:relative;
+
+}
+.example2 span {
+    display:inline-block;
+    position:absolute;
+    top:300px;
+    left:0px;
+
+    /* Оформление текста */
+    color:#FFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:17px;
+
+    /* Фон */
+    background-color:rgba(0,0,0,.7);
+    padding:10px 30px;
+}
