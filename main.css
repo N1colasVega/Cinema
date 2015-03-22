@@ -1,21 +1,25 @@
-#body1 { color: #3B4043;
+#body1 { 
+    color: #3B4043;
     background-color: #F8F8F8;
     background-image: url("images/backGround.jpg");
     background-size: cover;
     background-attachment: fixed;
     font-family: Verdana, Arial, sans-serif
 }
-#body2 { color: #3B4043;
+#body2 { 
+    color: #3B4043;
     background-color: #F8F8F8;
     background-image: url("images/origin.jpg");
     background-size: cover;
     background-attachment: fixed;
     font-family: Verdana, Arial, sans-serif
 }
-P        { font-size: 12pt;
+P { 
+    font-size: 12pt;
     color: #2F4F4F;
 }
-H1, H2, H6  { font-weight: normal;
+H1, H2, H6  { 
+    font-weight: normal;
     font-family: Arial, sans-serif
 }
 H1 { font-size: 20pt }
