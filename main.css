@@ -13,12 +13,12 @@
     font-family: Verdana, Arial, sans-serif
 }
 P        { font-size: 12pt;
-    color: #2F4F4F;
+    color: antiquewhite;
 }
 H1, H2, H6  { font-weight: normal;
     font-family: Arial, sans-serif
 }
-H1 { font-size: 20pt }
+H1 { font-size: 20pt ; color: #FFF }
 H2 { font-size: 18pt }
 H6 { font-size: 12pt }
 TABLE { font-size: 10pt }
@@ -26,33 +26,29 @@ BLOCKQUOTE P,
 ADDRESS { font-size: 10pt;
     font-style: italic
 }
-#poz 	  {
-    color: black;
-    padding-top: 460px;
-}
-#titleC    {
-}
+
+#poz 	  { color: #fff; position: relative; position: absolute; bottom: 0px; right: 0px;}
 #navbar   {
-    color: #8A2BE2;
+    color: antiquewhite;
     font-family: Arial, sans-serif;
     font-size: 14pt;
     text-transform: uppercase;
     list-style-type: none
 }
-#tableStail1{margin: auto;}
-figure.img {
-    margin: 0;
-}
+#navbar LI { padding: 5px 10px;
+    margin: 10px 0px; border: thin solid #B1BEC6;
+   background-color:#4e4a49 }
+.hovered { border-color: #3B4043; background-color:dimgray !important }
 
-figure.img figcaption {  /* стиль описания */
-    padding: 0 1%;
-    font: italic 90% Georgia,serif;
-}
+#cnavbar { float: left }
+
+#ccopyright { clear: both }
+
+#tableStail1{margin: auto;}
 
 .example2 {
     display:inline-block;
     position:relative;
-
 }
 .example2 span {
     display:inline-block;
