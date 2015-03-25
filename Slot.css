@@ -18,8 +18,19 @@ BLOCKQUOTE P,
 ADDRESS { font-size: 10pt;
     font-style: italic
 }
-#cheader { width: 100% ; }
-#poster { width: 30%;
-          min-width: 240px;
-          float: left }
-#return{clear: left}
+#screne{
+    width: 65%;
+    float: right;
+
+}
+#cheader {
+    width: 100% ;
+}
+#poster {
+    width: 30%;
+    min-width: 240px;
+    float: left
+}
+#return{
+    clear: left
+}
