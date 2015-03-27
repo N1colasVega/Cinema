@@ -4,104 +4,51 @@
 <head>
 
     <meta charset="UTF-8">
-
     <title>SimpleBox-плагин для создание галереи сайта | Демонстрация для сайта RUDEBOX</title>
     <link media="screen" href="demo/styles/demo.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
-
+    <script type="text/javascript"
+            src="jquery.min.js"></script>
 </head>
 
-<body>
-<!-- Используется только для демонстрации -->
-<div id="controls">
-    <!-- Яндекс.Директ -->
-    <div id="yandex_ad"></div>
-    <script type="text/javascript">
-        (function(w, d, n, s, t) {
-            w[n] = w[n] || [];
-            w[n].push(function() {
-                Ya.Direct.insertInto(84098, "yandex_ad", {
-                    ad_format: "direct",
-                    type: "240x400",
-                    border_type: "block",
-                    border_radius: true,
-                    site_bg_color: "FFFFFF",
-                    header_bg_color: "FEEAC7",
-                    bg_color: "FFF9F0",
-                    border_color: "FBE5C0",
-                    title_color: "0000CC",
-                    url_color: "006600",
-                    text_color: "000000",
-                    hover_color: "0066FF",
-                    favicon: true,
-                    no_sitelinks: false
-                });
-            });
-            t = d.getElementsByTagName("script")[0];
-            s = d.createElement("script");
-            s.src = "//an.yandex.ru/system/context.js";
-            s.type = "text/javascript";
-            s.async = true;
-            t.parentNode.insertBefore(s, t);
-        })(window, document, "yandex_context_callbacks");
-    </script>
+<body  >
+
+<div align="center" style="height:220px;">
+    <img src="images/fact/177.png" alt="" id="slide_show"><br>
+    <span id="slide_text">Картинка 1</span>
 </div>
+<span style="color:blue; cursor:pointer;" onclick="chgImg(2)">Давай вторую</span>
+&nbsp;&nbsp;&nbsp;
+<span style="color:blue; cursor:pointer;" onclick="chgImg(4)">Давай четвертую</span>
+<br><br>
 
-<section class="container">
-    <br>
+<span style="color:blue; cursor:pointer;" onclick="clearInterval(play)">Стоп</span>
+&nbsp;&nbsp;&nbsp;
+<span style="color:blue; cursor:pointer;" onclick="play=setInterval('chgImg(0)',
+5000);">Продолжить</span>
 
-    <div class="clear"></div>
-    <h3>Обычная</h3>
-    <ul>
-        <li>
-            <a href="images/cinemaScene/theDeparted.jpg" data-simplbox="demo1"><img src="images/cinemaScene/theDeparted.jpg" alt="Image 01" /></a>
-        </li>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_02.JPG" data-simplbox="demo1"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_02_thumb.jpg" alt="Image 02" /></a>
-        </li>
-    </ul>
-    <h3>С индикатором загрузки</h3>
-    <ul>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_03.JPG" data-simplbox="demo2"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_03_thumb.jpg" alt="Image 03" /></a>
-        </li>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_04.JPG" data-simplbox="demo2"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_04_thumb.jpg" alt="Image 04" /></a>
-        </li>
-    </ul>
-    <h3>С погрузочной иконкой и наложении</h3>
-    <ul>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_05.jpg" data-simplbox="demo3"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_05_thumb.jpg" alt="Image 05" /></a>
-        </li>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_06.jpg" data-simplbox="demo3"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_06_thumb.jpg" alt="Image 06" /></a>
-        </li>
-    </ul>
-    <h3>С иконкой прогрузки, наложении и иконкой закрытия</h3>
-    <ul>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_07.jpg" data-simplbox="demo4"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_07_thumb.jpg" alt="Image 07" /></a>
-        </li>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_08.jpg" data-simplbox="demo4"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_08_thumb.jpg" alt="Image 08" /></a>
-        </li>
-    </ul>
-    <h3>С погрузочной иконкой, наложением, иконкой закрытия и заголовоком</h3>
-    <ul>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_09.jpg" data-simplbox="demo5"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_09_thumb.jpg" alt="Image 09" /></a>
-        </li>
-        <li>
-            <a href="http://genert.laal.ee/demo/simplbox/gfx/image_10.jpg" data-simplbox="demo5"><img src="http://genert.laal.ee/demo/simplbox/gfx/image_10_thumb.jpg" alt="Image 10" /></a>
-        </li>
-    </ul>
-    <a href="images/cinemaScene/theDeparted.jpg" data-simplbox="demo1"><img src="images/cinemaScene/theDeparted.jpg" alt="Image 01" /></a>
-</section>
+<script type="text/javascript">
+    var imgs = ["images/fact/20.png","images/fact/95.png","images/fact/104.png","images/fact/177.png"];
+    var text = ['Картинка 1','<a href="index.php">Картинка 2</a>',
+        '<font color="red">Картинка 3</font>','Картинка 4'];
+    var n=0;
+    time=800;
+    play=setInterval("chgImg(0)", 5000);
 
-<script src='simplbox.min.js'></script>
-<script src="js/index.js"></script>
+    function chgImg(number) {
+        if (number!=0) n=number-2;
+        $('#slide_show').fadeOut(time, function() {    //для картинок
+            $(this).attr('src', imgs[n]).fadeIn(time);
+        });
+
+        $('#slide_text').fadeOut(time, function() {    //для текста
+            $(this).html(text[n]).fadeIn(time);
+        });
+
+        n++;
+        if (n>=imgs.length) n=0;
+    }
+</script>
 
 </body>
-
 </html>
