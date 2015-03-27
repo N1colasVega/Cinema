@@ -150,10 +150,6 @@ ADDRESS {
     padding: 0;
 }
 
-.fact p.tags {
-    visibility: hidden;
-}
-
 .fact p.source {
     padding-top: 120px;
     color: white;
@@ -165,14 +161,6 @@ ADDRESS {
     text-align: center;
 }
 
-.fact p.rating {
-    font-size: 12px;
-    visibility: hidden;
-}
-
-.fact a.anchor:link, .fact a.anchor:visited {
-    visibility: hidden;
-}
 .fact p.source a.src {
     color: #ffffff;
 }
