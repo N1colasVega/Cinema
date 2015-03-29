@@ -1,4 +1,4 @@
-#body1 { 
+#body1 {
     color: #3B4043;
     background-color: #F8F8F8;
     background-image: url("images/backGround.jpg");
@@ -6,7 +6,7 @@
     background-attachment: fixed;
     font-family: Verdana, Arial, sans-serif
 }
-#body2 { 
+#body2 {
     color: #3B4043;
     background-color: #F8F8F8;
     background-image: url("images/origin.jpg");
@@ -14,54 +14,80 @@
     background-attachment: fixed;
     font-family: Verdana, Arial, sans-serif
 }
-P { 
+P {
     font-size: 12pt;
-    color: #2F4F4F;
+    color: antiquewhite;
 }
-H1, H2, H6  { 
+H1, H2, H6 {
     font-weight: normal;
     font-family: Arial, sans-serif
 }
-H1 { font-size: 20pt }
-H2 { font-size: 18pt }
-H6 { font-size: 12pt }
-TABLE { font-size: 10pt }
+H1 {
+    font-size: 20pt ; color: #FFF
+}
+H2 {
+    font-size: 18pt
+}
+td {
+    padding: 10px;
+}
+H6 {
+    font-size: 12pt
+}
+TABLE {
+    font-size: 10pt;
+}
 BLOCKQUOTE P,
-ADDRESS { font-size: 10pt;
+ADDRESS {
+    font-size: 10pt;
     font-style: italic
 }
-#poz 	  {
-    color: black;
-    padding-top: 460px;
-}
-#titleC    {
+
+#poz {
+    color: #fff;
+    position: relative;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 #navbar   {
-    color: #8A2BE2;
+    color: antiquewhite;
     font-family: Arial, sans-serif;
     font-size: 14pt;
     text-transform: uppercase;
     list-style-type: none
 }
-#tableStail1{margin: auto;}
-figure.img {
-    margin: 0;
+#navbar LI {
+    padding: 5px 10px;
+    margin: 10px 0px; border: thin solid #B1BEC6;
+   background-color:#4e4a49
+}
+.hovered {
+    border-color: #3B4043;
+    background-color:dimgray
+    !important
 }
 
-figure.img figcaption {  /* стиль описания */
-    padding: 0 1%;
-    font: italic 90% Georgia,serif;
+#cnavbar {
+    float: left
+}
+
+#ccopyright {
+    clear: both
+}
+
+#tableStail1 {
+    margin:auto;
 }
 
 .example2 {
     display:inline-block;
     position:relative;
-
 }
 .example2 span {
     display:inline-block;
     position:absolute;
-    top:300px;
+    top:250px;
     left:0px;
 
     /* Оформление текста */
@@ -73,3 +99,92 @@ figure.img figcaption {  /* стиль описания */
     background-color:rgba(0,0,0,.7);
     padding:10px 30px;
 }
+.header{
+    height: 87px;
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    color: #FFFFFF;
+    position: relative;
+}
+.content {
+    background: #5e5e5e;
+    position: absolute;
+    color: #ffffff;
+    margin:2% 10% 2% 10%;
+    padding: 2%;
+    width: 78%;
+}
+.contentT {
+    background: #5e5e5e;
+    position: absolute;
+    color: #ffffff;
+    margin:2% 10% 2% 15%;
+    padding: 2%;
+    width: 73%;
+}
+.section {
+    align-content: center;
+}
+.a-link {
+    color: #ffffff;
+    font-size: 12pt;
+}
+/*Факты*/
+
+.fact {
+    position: relative; overflow: auto; _overflow: visible; z-index: 2;
+    min-height: 210px; _height: 190px;
+    border-bottom: 1px solid #CCC;
+    padding: 30px 0 10px 50px;
+}
+
+.fact p.title {
+    display: inline;
+    color: #ffffff;
+    margin: 10px;
+
+}
+
+.fact p.content {
+    font-size: 13px;
+    padding: 0;
+}
+
+.fact p.source {
+    padding-top: 120px;
+    color: white;
+}
+
+.fact .meta1 {
+    position: absolute; top: 60px; left: 30px;
+    width: 100px;
+    text-align: center;
+}
+
+.fact p.source a.src {
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
