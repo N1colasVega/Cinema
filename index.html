@@ -2,22 +2,57 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="ext-core.js"></script>
+    <script type="text/javascript"
+            src="jquery.min.js"></script>
     <link rel="stylesheet" href="main.css" type="text/css">
     <title>Кино</title>
 </head>
 
 <body id="body1" >
-<h1 style ="font-size: 45pt">Киноиндустрия</h1>
+<h1 style="font-size: 45pt">Киноиндустрия</h1>
 <p>
-    Приветствуем на нашем Web-сайте <dfn>"Киноиндустрия"</dfn>.<br>На нем вы сможете ознакомится
+    Приветствуем на нашем Web-сайте <DFN>"Киноиндустрия"</DFN>.<BR>На нем вы сможете ознакомится
     с самыми лучшими и популярными фильмами.
 </p>
-<ul id="navbar">
-    <li><a href="tags/bestFilm.html" style="text-decoration: none; color: #2F4F4F;">Лучшие фильмы</a></li>
-    <li><a href="tags/bestActor.html" style="text-decoration: none; color: #2F4F4F;">Лучшие актеры</a></li>
-    <li><a href="tags/interestingAboutFilm.html" style="text-decoration: none; color: #2F4F4F;">Интересные факты про фильмы</a></li>
-    <li><a href="tags/aboutCinema.html" style="text-decoration: none; color: #2F4F4F;">О кино</a></li>
-</ul>
-<address id ="poz" align="right">Все права защищены.<br>&#0169; ПІіт-13-1.</address>
+<div id="cnavbar">
+ <ul id="navbar" >
+     <li><a href="tags/bestFilm.html" style="text-decoration: none; color: antiquewhite">Лучшие фильмы</a></li>
+     <li><a href="tags/bestActor.html" style="text-decoration: none; color: antiquewhite;">Лучшие актеры</a></li>
+     <li><a href="tags/interestingAboutFilm.html" style="text-decoration: none; color: antiquewhite;">Интересные факты про фильмы </a></li>
+     <li><a href="tags/aboutCinema.html" style="text-decoration: none; color: antiquewhite;">О кино</a></li>
+ </ul>
+</div>
+
+<div  style="height:220px;clear: left">
+    <img src="images/slide/matrix.jpg" alt="" id="slide_show" width="650" height="400"><br>
+</div>
+
+<div id="ccopyright"> <address id ="poz" align="right">Все права защищены.<BR>&#0169; ПІіт-13-1.</address> </div>
+<script src="colorDrawn.js"></script>
+
+<script type="text/javascript">
+    var imgs = ["images/slide/matrix.jpg","images/slide/fightClub.jpg","images/slide/Constantine.jpg","images/slide/theDeparted.jpg"];
+    var text = ['Картинка 1','Картинка 2',
+        'Картинка 3','Картинка 4'];
+    var n=0;
+    time=800;
+    play=setInterval("chgImg(0)", 5000);
+
+    function chgImg(number) {
+        if (number!=0) n=number-2;
+        $('#slide_show').fadeOut(time, function() {    //для картинок
+            $(this).attr('src', imgs[n]).fadeIn(time);
+        });
+
+        $('#slide_text').fadeOut(time, function() {    //для текста
+            $(this).html(text[n]).fadeIn(time);
+        });
+
+        n++;
+        if (n>=imgs.length) n=0;
+    }
+</script>
 </body>
+
 </html>
